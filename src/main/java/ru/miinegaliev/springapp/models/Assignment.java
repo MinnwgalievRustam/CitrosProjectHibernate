@@ -1,4 +1,4 @@
-package ru.alishev.springcourse.models;
+package ru.miinegaliev.springapp.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

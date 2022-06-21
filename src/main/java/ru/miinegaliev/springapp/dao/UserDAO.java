@@ -1,9 +1,9 @@
-package ru.alishev.springcourse.dao;
+package ru.miinegaliev.springapp.dao;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import ru.alishev.springcourse.models.User;
+import ru.miinegaliev.springapp.models.User;
 
 import java.util.List;
 

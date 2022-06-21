@@ -1,4 +1,4 @@
-package ru.alishev.springcourse.config;
+package ru.miinegaliev.springapp.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -29,10 +29,10 @@ import java.util.Properties;
  * @author Neil Alishev
  */
 @Configuration
-@ComponentScan("ru.alishev.springcourse")
+@ComponentScan("ru.miinegaliev.springapp")
 @PropertySource("classpath:hibernate.properties")
 @EnableTransactionManagement
-@EnableJpaRepositories("ru.alishev.springcourse.repositories")
+@EnableJpaRepositories("ru.miinegaliev.springapp.repositories")
 @EnableWebMvc
 public class SpringConfig implements WebMvcConfigurer {
 

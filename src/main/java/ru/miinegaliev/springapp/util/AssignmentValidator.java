@@ -1,11 +1,11 @@
-package ru.alishev.springcourse.util;
+package ru.miinegaliev.springapp.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import ru.alishev.springcourse.models.Assignment;
-import ru.alishev.springcourse.services.AssignmentsService;
+import ru.miinegaliev.springapp.models.Assignment;
+import ru.miinegaliev.springapp.services.AssignmentsService;
 
 @Component
 public class AssignmentValidator implements Validator {

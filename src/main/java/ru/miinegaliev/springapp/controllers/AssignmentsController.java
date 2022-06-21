@@ -1,13 +1,13 @@
-package ru.alishev.springcourse.controllers;
+package ru.miinegaliev.springapp.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import ru.alishev.springcourse.models.Assignment;
-import ru.alishev.springcourse.services.AssignmentsService;
-import ru.alishev.springcourse.util.AssignmentValidator;
+import ru.miinegaliev.springapp.models.Assignment;
+import ru.miinegaliev.springapp.services.AssignmentsService;
+import ru.miinegaliev.springapp.util.AssignmentValidator;
 
 import javax.validation.Valid;
 

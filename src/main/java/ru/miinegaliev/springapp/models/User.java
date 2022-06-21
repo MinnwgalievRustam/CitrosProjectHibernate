@@ -1,10 +1,9 @@
-package ru.alishev.springcourse.models;
+package ru.miinegaliev.springapp.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "user")

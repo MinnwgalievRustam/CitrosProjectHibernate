@@ -1,13 +1,13 @@
-package ru.alishev.springcourse.services;
+package ru.miinegaliev.springapp.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.alishev.springcourse.models.Assignment;
-import ru.alishev.springcourse.models.User;
-import ru.alishev.springcourse.repositories.UserRepository;
+import ru.miinegaliev.springapp.models.Assignment;
+import ru.miinegaliev.springapp.models.User;
+import ru.miinegaliev.springapp.repositories.UserRepository;
 
 import java.util.Date;
 import java.util.List;
