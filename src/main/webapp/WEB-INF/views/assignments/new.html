@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>New assignment</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/assignments}" th:object="${assignment}">
+
+    <label for="subjectOrder">Введите предмет поручения: </label>
+    <input type="text" th:field="*{subjectOrder}" id="subjectOrder"/>
+    <div style="color:red" th:if="${#fields.hasErrors('subjectOrder')}" th:errors="*{subjectOrder}">subjectOrder Error</div>
+    <br/>
+    <label for="signControl">Введите степень контрольности </label>
+    <input type="text" th:field="*{signControl}" id="signControl"/>
+    <div style="color:red" th:if="${#fields.hasErrors('signControl')}" th:errors="*{signControl}">sign Control Error</div>
+    <br/>
+    <label for="signPerformance">Введите предмет поручения: </label>
+    <input type="text" th:field="*{signPerformance}" id="signPerformance"/>
+    <div style="color:red" th:if="${#fields.hasErrors('signPerformance')}" th:errors="*{signPerformance}">signPerformance Error</div>
+    <br/>
+    <label for="textOrder">Введите предмет поручения: </label>
+    <input type="text" th:field="*{textOrder}" id="textOrder"/>
+    <div style="color:red" th:if="${#fields.hasErrors('textOrder')}" th:errors="*{textOrder}">signPerformance Error</div>
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+
+</body>
+</html>

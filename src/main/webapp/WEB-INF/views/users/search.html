@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/users/search}">
+    <label for="query">Введите поисковой запрос: </label>
+    <input type="text" id="query" name="query"/>
+    <br/>
+    <input type="submit" value="Искать!"/>
+</form>
+
+<div th:if="${users}">
+    <div th:if="${users.isEmpty()}">
+        <span>Пользователь не найден</span>
+    </div>
+
+    <div th:each="user : ${users}">
+        <p th:text="${user.getSurname() + ', ' +user.getName() + ', ' + user.getLastName() + ', ' + user.getJobTitle() }">user</p>
+
+        <div th:if="${user.getAssignment() != null}">
+            <span>text: </span> <span th:text="${user.getAssignment().getTextOrder()}">Assignment</span>
+        </div>
+
+        <div th:if="${user.getAssignment() == null}">
+            <span>Поручение без исполнителей</span>
+        </div>
+
+        <hr/>
+    </div>
+</div>
+
+</body>
+</html>

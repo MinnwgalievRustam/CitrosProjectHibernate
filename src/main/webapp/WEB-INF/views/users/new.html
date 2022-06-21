@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New book</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/users}" th:object="${user}">
+    <label for="surname">Введите surname </label>
+    <input type="text" th:field="*{surname}" id="surname"/>
+    <div style="color:red" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">surname Error</div>
+    <br/>
+    <label for="name">Введите name </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">name Error</div>
+    <br/>
+    <label for="lastName">Введите lastName </label>
+    <input type="text" th:field="*{lastName}" id="lastName"/>
+    <div style="color:red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">lastname Error</div>
+    <br/>
+    <label for="jobTitle">Введите jobTitle </label>
+    <input type="text" th:field="*{jobTitle}" id="jobTitle"/>
+    <div style="color:red" th:if="${#fields.hasErrors('jobTitle')}" th:errors="*{jobTitle}">jobTitle Error</div>
+    <br/>
+    <input type="submit" value="Создать!"/>
+</form>
+
+</body>
+</html>

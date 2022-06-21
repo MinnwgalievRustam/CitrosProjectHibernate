@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать поручение</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/assignments/{id}(id=${assignment.getId()})}" th:object="${assignment}">
+    <label for="subjectOrder">Введите subjectOrder </label>
+    <input type="text" th:field="*{subjectOrder}" id="subjectOrder"/>
+    <div style="color:red" th:if="${#fields.hasErrors('subjectOrder')}" th:errors="*{subjectOrder}">Full Name Error</div>
+    <br/>
+    <label for="signControl">Введите signControl </label>
+    <input type="text" th:field="*{signControl}" id="signControl"/>
+    <div style="color:red" th:if="${#fields.hasErrors('signControl')}" th:errors="*{signControl}">Full Name Error</div>
+    <br/>
+    <label for="signPerformance">Введите signPerformance </label>
+    <input type="text" th:field="*{signPerformance}" id="signPerformance"/>
+    <div style="color:red" th:if="${#fields.hasErrors('signPerformance')}" th:errors="*{signPerformance}">Full Name Error</div>
+    <br/>
+    <label for="textOrder">Введите textOrder </label>
+    <input type="text" th:field="*{textOrder}" id="textOrder"/>
+    <div style="color:red" th:if="${#fields.hasErrors('textOrder')}" th:errors="*{textOrder}">Full Name Error</div>
+    <br/>
+    <input type="submit" value="Редактировать!"/>
+</form>
+
+</body>
+</html>

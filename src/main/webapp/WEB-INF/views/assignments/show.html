@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Show</title>
+</head>
+<body>
+<p th:text="${assignment.getSubjectOrder() + ', ' + assignment.getSignControl() + ', ' +assignment.getSignPerformance() + ', ' +assignment.getTextOrder()}">VALUE</p>
+
+<div th:if="${users.isEmpty()}">
+    <p>У поручения нет исполнителя</p>
+    <hr/>
+</div>
+
+<div th:if="${!users.isEmpty()}">
+    <hr/>
+    <b>Исполнители:</b>
+    <br/>
+    <table th:each="user : ${users}">
+        <tr>
+            <td>
+                <span th:text="${user.getName() + ', ' + user.getSurname() + ', ' + user.getLastName() + ', ' + user.getJobTitle()}"
+                   th:style="${user.isExpired()} ? 'color: red' : 'color: black'">
+                    book
+                </span>
+            </td>
+        </tr>
+    </table>
+    <hr/>
+</div>
+
+<form th:method="GET" th:action="@{/assignments/{id}/edit(id=${assignment.getId()})}">
+    <input type="submit" value="Редактировать"/>
+</form>
+
+<form th:method="DELETE" th:action="@{/assignments/{id}(id=${assignment.getId()})}">
+    <input type="submit" value="Удалить"/>
+</form>
+
+</body>
+</html>
